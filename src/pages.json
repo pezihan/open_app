@@ -1,16 +1,100 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/index/index",
+			"path": "pages/login/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "登录",
+				"app-plus":{
+					"titleNView": false,
+					"nvueCompiler":"uni-app" 
+				}
+			}
+		},
+		{
+			"path": "pages/order/index",
+			"style": {
+				"navigationBarTitleText": "订单",
+				"enablePullDownRefresh": true,
+				"app-plus":{
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/order/orderdetail/index",
+			"style": {
+				"navigationBarTitleText": "订单详细",
+				"enablePullDownRefresh": true,
+				"app-plus": {
+					"animationType": "slide-out-right",
+    				"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/order/newOrder/index",
+			"style": {
+				"navigationBarTitleText": "新建订单",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/set/index",
+			"style": {
+				"navigationBarTitleText": "数据接口设置",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/shipments/index",
+			"style": {
+				"navigationBarTitleText": "产品",
+				"app-plus":{
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/user/index",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"app-plus":{
+					"titleNView": false
+				}
 			}
 		}
 	],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "Open订单管理",
+		"navigationBarBackgroundColor": "#fb824e",
+		"backgroundColor": "#fb824e"
+	},
+	"tabBar": {
+		"color": "#555555",
+		"selectedColor": "#fb824e",
+		"backgroundColor": "#fff",
+		"position": "bottom",
+		"borderStyle": "black",
+		"list": [
+			{
+				"pagePath": "pages/order/index",
+				"text": "订单",
+				"iconPath": "./static/icon/order_o.png",
+				"selectedIconPath": "./static/icon/order.png"
+			},
+			{
+				"pagePath": "pages/shipments/index",
+				"text": "产品",
+				"iconPath": "./static/icon/shipments_o.png",
+				"selectedIconPath": "./static/icon/shipments.png"
+			},
+			{
+				"pagePath": "pages/user/index",
+				"text": "我的",
+				"iconPath": "./static/icon/user_o.png",
+				"selectedIconPath": "./static/icon/user.png"
+			}
+		]
 	}
 }
