@@ -105,7 +105,7 @@
 						}
 					}
 				],
-				// 多选按钮
+				// 多选按钮编辑
 				checkboxShow: false,
 				// 提交服务端的数据
 				getList: {
@@ -141,6 +141,7 @@
 		// 上拉刷新
 		onPullDownRefresh() {
 			// uni.startPullDownRefresh()
+			this.getList.start = 1
 			this.dataList = []
 			this.getLists()
 			uni.stopPullDownRefresh()
@@ -251,6 +252,7 @@
 						title: '删除失败',
 						icon: "none"
 					});
+					this.deleteId = []
 					return
 				}
 				uni.showToast({
@@ -272,7 +274,6 @@
 				}
 				if(e.content.text === '删除') {
 					this.deleteId.push(id)
-					console.log(this.deleteId);
 					this.deletes()
 					// 在数据列表中获取删除数据的索引，然后通过索引在数组中删除
 					let index = this.dataList.findIndex(v => v.id===id)
@@ -324,7 +325,6 @@
 					animationType: 'slide-in-right',
     				animationDuration: 300
 				});
-				console.log("ss");
 			},
 			// 单选
 			handleItemChange(id) {
@@ -501,6 +501,7 @@
 	.bottom_tool {
 		position: fixed;
 		bottom: 90rpx;
+		// bottom: 0rpx;
 		left: 0;
 		background-color: #fff;
 		width: 100vw;

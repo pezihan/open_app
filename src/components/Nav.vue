@@ -1,7 +1,7 @@
 <template>
     <view>
         <!-- 导航、搜索栏 -->
-        <uni-nav-bar fixed="true" background-color="#fb824e" color="#fff" @clickLeft="handleClickLeft" @clickRight="handleClickRight">
+        <uni-nav-bar status-bar fixed="true" background-color="#fb824e" color="#fff" @clickLeft="handleClickLeft" @clickRight="handleClickRight">
             <view slot="left" class="iconfont icon-bianji"></view>
             <view class="nav_content">
                 <view class="nav_seek_option">
@@ -64,7 +64,7 @@ export default {
         handleClickRight() {
             this.$emit("handleClickRight",true)
         },
-        // 切换顶部滚动选项卡
+        // 切换顶部滚动选项卡((分段器)
         onClickItem(index) {
             this.$emit("onClickItem",index)
             // this.current = index

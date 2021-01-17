@@ -49,9 +49,16 @@
 			"path": "pages/shipments/index",
 			"style": {
 				"navigationBarTitleText": "产品",
+				"enablePullDownRefresh": true,
 				"app-plus":{
 					"titleNView": false
 				}
+			}
+		},
+		{
+			"path": "pages/shipments/newShipment/index",
+			"style": {
+				"navigationBarTitleText": "添加产品"
 			}
 		},
 		{
@@ -60,6 +67,26 @@
 				"navigationBarTitleText": "我的",
 				"app-plus":{
 					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/user/password/index",
+			"style": {
+				"navigationBarTitleText": "修改密码",
+				"app-plus": {
+					"animationType": "slide-out-right",
+    				"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/user/userSet/index",
+			"style": {
+				"navigationBarTitleText": "用户管理",
+				"app-plus": {
+					"animationType": "slide-out-right",
+    				"animationDuration": 300
 				}
 			}
 		}

@@ -60,6 +60,14 @@ Vue.filter('dateFormat', function (originVal) {
   return `${y}-${m}-${d} ${hh}:${mm}:${ss}`
 })
 
+Vue.filter('dateBirth', function (originVal) { // 员工出生的过滤函数
+  const dt = new Date(originVal * 1000)
+  const y = dt.getFullYear() // 年
+  const m = (dt.getMonth() + 1 + '').padStart(2, '0') // 月
+  const d = (dt.getDate() + '').padStart(2, '0') // 日
+  return `${y}年${m}月${d}日`
+})
+
 App.mpType = 'app'
 
 const app = new Vue({
