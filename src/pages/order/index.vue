@@ -500,6 +500,7 @@
 
 	.bottom_tool {
 		position: fixed;
+		// 打包成app这里bottom要设置为 0 app默认忽略掉了底部导航栏高度
 		bottom: 90rpx;
 		// bottom: 0rpx;
 		left: 0;

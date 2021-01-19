@@ -43,8 +43,14 @@ export default {
     },
     async onLoad(option) {
         if(!option.id) {
+            uni.setNavigationBarTitle({
+            title: '添加产品'
+             });
             return
         }
+        uni.setNavigationBarTitle({
+            title: '修改产品'
+        });
         const res = await this.request({url:'/editCommodId',data:option,method:'post'})
         if (res.success !== 200) {
             uni.showToast({

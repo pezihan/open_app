@@ -10,11 +10,11 @@
                         <view class="select_icon"></view>
                     </picker>
                 </view>
-            <view class="nav_seek">
-                <view class="iconfont icon-sousuo"></view>
-                <!--  keydown.enter是键盘回车键监听 confirm才是手机端回车确认键   -->
-                <input placeholder-style="color:#fff" v-model="seekInput" placeholder="输入搜索关键字" @confirm="handleEnterClick">
-            </view>
+                <view class="nav_seek">
+                    <view class="iconfont icon-sousuo"></view>
+                    <!--  keydown.enter是键盘回车键监听 confirm才是手机端回车确认键   -->
+                    <input placeholder-style="color:#fff" v-model="seekInput" placeholder="输入搜索关键字" @confirm="handleEnterClick">
+                </view>
             </view>
             <view slot="right" class="iconfont icon-tianjia"></view>
         </uni-nav-bar>
@@ -27,7 +27,7 @@
     </view>
 </template>
 <script>
-import {uniNavBar,uniSegmentedControl} from '@dcloudio/uni-ui'
+import {uniNavBar} from '@dcloudio/uni-ui'
 export default {
     data() {
         return {
@@ -70,7 +70,7 @@ export default {
             // this.current = index
         }
     },
-    components: {uniNavBar,uniSegmentedControl}
+    components: {uniNavBar}
 }
 </script>
 

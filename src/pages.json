@@ -84,6 +84,18 @@
 			"path": "pages/user/userSet/index",
 			"style": {
 				"navigationBarTitleText": "用户管理",
+				"enablePullDownRefresh": true,
+				"app-plus": {
+					"animationType": "slide-out-right",
+					"animationDuration": 300,
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/user/userSet/newUser/index",
+			"style": {
+				"navigationBarTitleText": "添加用户",
 				"app-plus": {
 					"animationType": "slide-out-right",
     				"animationDuration": 300

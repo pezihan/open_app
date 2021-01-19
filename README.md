@@ -1,5 +1,7 @@
 # open_app
 
+​		open订单管理系统 uni-app版本
+
 ## Project setup
 ```
 npm install
